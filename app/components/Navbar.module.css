@@ -1,0 +1,37 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1); /* Fond légèrement transparent */
+    backdrop-filter: blur(10px); /* Effet de flou */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navLinks li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.hidden {
+    transform: translateY(-100%); /* Déplace la navbar hors de l'écran */
+    opacity: 0;
+}
