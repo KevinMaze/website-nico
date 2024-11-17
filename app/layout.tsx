@@ -3,14 +3,14 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+const title = localFont({
+  src: "./fonts/Advent.ttf",
+  variable: "--font-title",
   weight: "100 900",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+const para = localFont({
+  src: "./fonts/Alumni.ttf",
+  variable: "--font-para",
   weight: "100 900",
 });
 
