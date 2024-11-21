@@ -1,6 +1,9 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0B0C10;
+  --shadow: #1F2833;
+  --text: #C5C6C7;
+  --primary: #45A29E;
+  --title: #66FCF1;
 }
 
 * {
@@ -12,6 +15,10 @@
 a {
   color: inherit;
   text-decoration: none;
+}
+
+html {
+  background-color: white;
 }
 
 @media (prefers-color-scheme: dark) {

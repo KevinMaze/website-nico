@@ -4,14 +4,16 @@
     left: 0;
     width: 100%;
     padding: 1rem 2rem;
-    padding-top: 1.5rem;
+    margin-top: .5rem;
+    margin-right: 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(255, 255, 255, 0.1); /* Fond légèrement transparent */
-    backdrop-filter: blur(10px); /* Effet de flou */
+    background: rgba(31, 40, 51, 0.2); /* Fond légèrement transparent */
+    backdrop-filter: blur(2px); /* Effet de flou */
     transition: transform 0.3s ease, opacity 0.3s ease;
     z-index: 1000;
+    border-radius: 5%;
 }
 
 .logo {
@@ -26,7 +28,7 @@
 }
 
 .navLinks li a {
-    color: #fff;
+    color: var(--title);
     text-decoration: none;
     font-weight: 500;
 }
