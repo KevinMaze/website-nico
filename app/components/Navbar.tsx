@@ -3,6 +3,8 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import styles from "./Navbar.module.css";
+import logo from "../../public/images/logo.png";
+import Image from "next/image";
 
 const Navbar = () => {
     const [isVisible, setIsVisible] = useState(true);
@@ -31,13 +33,13 @@ const Navbar = () => {
 
     return (
         <nav className={`${styles.navbar} ${!isVisible ? styles.hidden : ""}`}>
-        <div className={styles.logo}>Logo</div>
-        <ul className={styles.navLinks}>
-            <li><Link href="/">Accueil</Link></li>
-            <li><Link href="/about">À propos</Link></li>
-            <li><Link href="/services">Services</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
-        </ul>
+            <Link href="/">< Image src={logo} alt="Logo Nicolas Michon" className={styles.logo}/></Link>
+            <ul className={styles.navLinks}>
+                <li><Link href="/AccueilMontage">Accueil Montage</Link></li>
+                <li><Link href="/GallerieMontage">Gallerie</Link></li>
+                <li><Link href="/About">A Propos</Link></li>
+                <li><Link href="/Contact">Contact</Link></li>
+            </ul>
         </nav>
     );
 };

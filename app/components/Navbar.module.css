@@ -35,3 +35,8 @@
     transform: translateY(-100%); /* Déplace la navbar hors de l'écran */
     opacity: 0;
 }
+
+.logo {
+    width: 8rem;
+    height: 3rem;
+}

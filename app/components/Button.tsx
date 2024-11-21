@@ -1,6 +1,6 @@
 import NextLink from "next/link";
 // import { title } from "@/fonts/font";s
-import './Button.module.css'
+import  style  from './Button.module.css'
 
 type ButtonProps = {
     label: string;
@@ -12,8 +12,8 @@ export const Button: React.FC<ButtonProps> = ({label, href, onClick}) => {
     if (href) {
         return (
             <div >
-                <div className="container">
-                    <NextLink href={href} passHref className="btn">{label}</NextLink>
+                <div className={style.container}>
+                    <NextLink href={href} passHref className={style.btn}>{label}</NextLink>
                 </div>
             </div>
         );

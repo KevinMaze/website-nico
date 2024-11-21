@@ -1,11 +1,31 @@
-import Image from "next/image";
+import { Button } from "./components/Button";
 import styles from "./page.module.css";
-import { Button } from "../app/components/Button";
+
+export const metadata = {
+    title: "Nicolas Michon",
+    description: "Monteur vidéo et copywriter",
+    icons: {
+        icon: "../public/images/logo.png",
+    },
+};
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-        <Button label="Cliquez ici" href="/Gallerie" />
-    </div>
-  );
+    return (
+        <section className={styles.container}>
+
+            <div className={styles.sectionLeft}>
+                <div className={styles.overlay}></div>
+                <div className={styles.buttonWrapper}>
+                    <Button label="Montage" href="GallerieMontage"/>
+                </div>
+            </div>
+
+            <div className={styles.sectionRight}>
+                <div className={styles.overlay}></div>
+                <div className={styles.buttonWrapper}> 
+                    <Button label="Copywriting" href="accueilCopy"/>
+                </div>
+            </div>
+        </section>
+    );
 }
