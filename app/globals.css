@@ -4,7 +4,11 @@
   --text: #C5C6C7;
   --primary: #45A29E;
   --title: #66FCF1;
+
+  --title: "Advent Pro", sans-serif;
+  --para: "Alumni Sans Pinstripe", sans-serif;
 }
+
 
 * {
   box-sizing: border-box;

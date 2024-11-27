@@ -35,10 +35,10 @@ const Navbar = () => {
         <nav className={`${styles.navbar} ${!isVisible ? styles.hidden : ""}`}>
             <Link href="/">< Image src={logo} alt="Logo Nicolas Michon" className={styles.logo}/></Link>
             <ul className={styles.navLinks}>
-                <li><Link href="/AccueilMontage">Accueil Montage</Link></li>
-                <li><Link href="/GallerieMontage">Gallerie</Link></li>
-                <li><Link href="/About">A Propos</Link></li>
-                <li><Link href="/Contact">Contact</Link></li>
+                <li><Link href="/AccueilMontage" className={styles.line}>Accueil Montage</Link></li>
+                <li><Link href="/GallerieMontage" className={styles.line}>Gallerie</Link></li>
+                <li><Link href="/About" className={styles.line}>A Propos</Link></li>
+                <li><Link href="/Contact" className={styles.line}>Contact</Link></li>
             </ul>
         </nav>
     );

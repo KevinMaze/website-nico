@@ -1,0 +1,38 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 99%;
+    padding: 1rem 2rem;
+    margin-left: .4em;
+    margin-bottom: .2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(31, 40, 51, 0.7); /* Fond légèrement transparent */
+    backdrop-filter: blur(2px); /* Effet de flou */
+    z-index: 1000;
+    border-radius: 25px;
+}
+
+.footer p {
+    font-family: var(--title);
+    font-size: 1.5em;
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+.navLinks {
+    display: flex;
+    gap: 2rem;
+}
+
+.link {
+    width: 2.1rem;
+    height: 2rem;
+}
+
+.logo {
+    width: 8rem;
+    height: 3rem;
+}

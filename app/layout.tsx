@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import { usePathname} from "next/navigation";
 
 const title = localFont({
@@ -30,9 +31,15 @@ export default function RootLayout({
   const isLandingPage = pathname === "/";
   return (
     <html lang="fr">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+        <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Alumni+Sans+Pinstripe:ital@0;1&display=swap" rel="stylesheet"/>
+      </head>
       <body>
         {!isLandingPage && < Navbar />}
         {children}
+        {!isLandingPage && < Footer />}
       </body>
     </html>
   );
