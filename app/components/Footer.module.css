@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(31, 40, 51, 0.7); /* Fond légèrement transparent */
+    background: rgba(31, 40, 51, 0.8); /* Fond légèrement transparent */
     backdrop-filter: blur(2px); /* Effet de flou */
     z-index: 1000;
     border-radius: 25px;
