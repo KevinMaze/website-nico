@@ -16,14 +16,14 @@ export default function Home() {
             <div className={styles.sectionLeft}>
                 <div className={styles.overlay}></div>
                 <div className={styles.buttonWrapper}>
-                    <Button label="Montage" href="GallerieMontage"/>
+                    <Button label="Montage" href="/AccueilMontage"/>
                 </div>
             </div>
 
             <div className={styles.sectionRight}>
                 <div className={styles.overlay}></div>
                 <div className={styles.buttonWrapper}> 
-                    <Button label="Copywriting" href="accueilCopy"/>
+                    <Button label="Copywriting" href="AccueilCopy"/>
                 </div>
             </div>
         </section>
