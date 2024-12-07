@@ -1,0 +1,29 @@
+/* ACCCEUIL */
+.bg__logo {
+    position: relative;
+    height: 100vh;
+}
+
+.bg__logo::before {
+    content: "";
+    position: absolute;
+    opacity: 0.1;    
+    background-image: url(../../public/images/acceuil-montage.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+
+/* TITLE */
+.bg__title {
+    position: relative;
+    background-color: var(--text);
+    height: 100vh;
+}
+
+
+/* GALLERY */
+
+
+/* ABOUT */
