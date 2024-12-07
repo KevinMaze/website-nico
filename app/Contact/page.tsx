@@ -1,46 +1,86 @@
-import React from 'react'
+// import React, { useRef } from 'react'
 import styles from './Contact.module.css'
 import clsx from 'clsx'
+import { BsFillEnvelopeAtFill } from "react-icons/bs";
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
+import { Button } from '../components/Button';
+// import emailjs from 'emailjs-com';
+
+
 
 const Contact = () => {
+    // const form = useRef();
+
+    // const sendEmail = (e) => {
+    //     e.preventDefault();
+
+    //     emailjs.send("service_7z5z5qo", "template_7z5z5qo", form.current, {
+    //         publicKey:'',
+    //     })
+    //     e.target.reset();
+    //     };
+
+
     return (
-        <div className={clsx (styles.container, 'flux')}>
-            <div className={styles.div__form}>
-                <h2>Garder le contact</h2>
-                <div className={styles.contact__info}>
-                    <div className={styles.contact__card}>
-                        <i className="bx bx-mail-send contact__card-icon"></i>
+        <div className={styles.bg_img}>
 
-                        <h4>E-mail</h4>
-                        <a href="mailto:kevinmaze0889@gmail.com" className="contact__button">Ecrivez-moi
-                            <i className="bx bx-right-arrow-alt contact__button-icon"></i>
-                        </a>
+            <div className={clsx (styles.container, 'flux')}>
+
+                <div className={styles.div__contact}>
+
+                    <h2>Garder le contact</h2>
+
+                    <div className={styles.contact__info}>
+
+                        <div className={styles.contact__card}>
+                            <BsFillEnvelopeAtFill />
+                            <h4>E-mail</h4>
+                            <a href="mailto:" className={styles.contact__button}>Ecrivez-moi
+                                <BsArrowRight className={styles.arrow}/>
+                            </a>
+                        </div>
+
+                        <div className={styles.contact__card}>
+                            <BsFillTelephoneFill />
+                            <h4>Téléphone</h4>
+                            <a href="#" className={styles.contact__button} target='_blank'>Réservez votre appel
+                                <BsArrowRight className={styles.arrow}/>
+                            </a>
+                        </div>
+
                     </div>
 
-                    <div className={styles.contact__card}>
-                        <i className="bx bxl-whatsapp contact__card-icon"></i>
-
-                        <h4>Téléphone</h4>
-                        <a href="https://calendly.com/kevinmaze0889/30min" className="contact__button" target='_blank'>Réservez votre appel
-                            <i className="bx bx-right-arrow-alt contact__button-icon"></i>
-                        </a>
-                    </div>
                 </div>
+
+                <div className={styles.div__contact}>
+
+                    <h3>Décrivez votre projet</h3>
+                    {/* onSubmit={""} */}
+                    {/* ref={""} */}
+                    <form className={styles.div__form}>
+                        <div className="contact__form-div">
+                            <input type="text" name='name' className={styles.form__input} placeholder='Votre nom'/>
+                        </div>
+
+                        <div className="contact__form-div">
+                            <input type="email" name='email' className={styles.form__input} placeholder='Votre Email'/>
+                        </div>
+
+                        <div className="contact__form-div">
+                            <textarea name='project' id='' className={clsx (styles.form__input, styles.area)} placeholder='Décrivez votre projet'/>
+                        </div>
+
+                        <Button label="Envoyer"/>   
+                    </form>
+
+                </div>
+
             </div>
 
-            <div className={styles.div__form}>
-                <h3>Décrivez votre projet</h3>
-                <form action="">
-                    <label htmlFor="nom">Nom</label>
-                    <input type="text" id="nom" name="nom" placeholder="Votre nom" required />
-                    <label htmlFor="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Votre email" required />
-                    <label htmlFor="message">Message</label>
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Votre message" required></textarea>
-                    <button type="submit">Envoyer</button>
-                </form>
-            </div>
         </div>
+    
+    
     )
 }
 

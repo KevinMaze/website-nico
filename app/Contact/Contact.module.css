@@ -1,4 +1,25 @@
+/* BACKGROUND IMAGE */
+.bg_img {
+    position: relative;
+}
+
+.bg_img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1;    
+    background-image: url(../../public/images/img_contact.jpg);
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
+}
+
+/* CONTAINER */
 .container {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1em;
@@ -7,20 +28,20 @@
     height: 100vh;
 }
 
-.div__form {
+/* DIV CONTACT */
+
+.div__contact {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1em;
+    gap: 1.5em;
     padding: 1em;
-    border-radius: 25px;
-    width: 80%;
     margin: 0 auto;
     margin-bottom: 1em;
 }
 
-.div__form h2 {
+.div__contact h2 {
     color: var(--primary);
     font-family: var(--title);
     text-transform: uppercase;
@@ -28,7 +49,7 @@
     font-size: 2.5em;
 }
 
-.div__form h3 {
+.div__contact h3 {
     color: var(--text);
     font-family: var(--para);
     font-size: 1.5em;
@@ -36,14 +57,64 @@
 
 .contact__info {
     display: grid;
-    row-gap: 1rem;
-    grid-template-columns: 300px;
+    row-gap: 5em;
+    grid-template-columns: 400px;
 }
 
 .contact__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8em;
     background-color: var(--text);
+    font-family: var(--para);
+    color: var(--background);
+    font-size: 1.2em;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    border-radius: 0.75rem;
+    border-radius: 0.75em;
     text-align: center;
+    height: 150px;
 }
+
+.arrow {
+    padding-left: 0.5em;
+    padding-top: 0.5em;
+}
+
+.contact__button:hover .arrow{
+    transform: translateX(0.25rem);
+}
+
+
+/* FROM */
+.div__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+    padding: 1em;
+    border-radius: 25px;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+}
+
+.form__input {
+    background-color: var(--text);
+    color: var(--background);
+    font-family: var(--para);
+    font-size: 1.2em;
+    width: 250px;
+    border-radius: 0.75em;
+    height: 50px;
+    text-align: center;
+    width: 400px;
+}
+
+.area {
+    resize: none;
+    height: 200px;
+}
+
