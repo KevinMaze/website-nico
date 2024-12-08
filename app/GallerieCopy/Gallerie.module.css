@@ -27,7 +27,7 @@
     margin-bottom: 2.5em;
     text-decoration: underline;
     text-transform: uppercase;
-    color: var(--color-title);
+    color: var(--background);
     text-align: center;
 }
 
@@ -44,14 +44,7 @@
     height: 350px;
     filter: grayscale(100%); /* Image en niveaux de gris */
     transition: filter 0.3s ease, transform 0.3s ease;
-}
-
-.img__wrapper {
-    position: relative;
-    overflow: hidden;
     cursor: pointer;
-    width: 250px;
-    height: 350px;
 }
 
 .img__wrapper:hover .image {
