@@ -3,7 +3,10 @@ import styles from './Accueil.module.css'
 import clsx from 'clsx'
 import Image from 'next/image'
 import Logo from '../../public/images/logo.png'
-import ImgTitle from '../../public/images/bg-montage.jpg' 
+import ImgTitle from '../../public/images/bg-montage.jpg'
+import Pexel from '../../public/images/pexel-1.jpg'
+import Profil from '../../public/images/profil.jpg'
+import { Button } from '../components/Button'
 
 const AccueilMontage = () => {
     return (
@@ -30,12 +33,13 @@ const AccueilMontage = () => {
             </div>
 
             <div className={styles.bg__gallery}>
-                
+
                 <div className={clsx (styles.gallery, 'flux')}>
                     <h2>gallery</h2>
 
                     <div className={styles.gallery__div}>
-
+                        < Image src={Pexel} alt='Image de la gallery' className={styles.imgGallery} />
+                        < Button label='Gallery' href='/GallerieMontage'/>
                     </div>
 
                 </div>
@@ -43,6 +47,12 @@ const AccueilMontage = () => {
 
             <div className={styles.bg__about}>
                 <div className={clsx (styles.about, 'flux')}>
+                    <h2>a propos</h2>
+
+                    <div className={styles.about__div}>
+                        <Button label='A Propos' href='/About'/>
+                        < Image src={Profil} alt='Image de profil' />
+                    </div>
 
                 </div>
             </div>

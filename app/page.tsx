@@ -23,7 +23,7 @@ export default function Home() {
             <div className={styles.sectionRight}>
                 <div className={styles.overlay}></div>
                 <div className={styles.buttonWrapper}> 
-                    <Button label="Copywriting" href="AccueilCopy"/>
+                    <Button label="Copywriting" href="/AccueilCopy"/>
                 </div>
             </div>
         </section>
