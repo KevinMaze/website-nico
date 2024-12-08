@@ -24,7 +24,7 @@
     gap: 1em;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 90vh;
 }
 
 /* DIV CONTACT */
@@ -74,6 +74,10 @@
     border-radius: 0.75em;
     text-align: center;
     height: 150px;
+}
+
+.contact__card a {
+    font-weight: bold;
 }
 
 .arrow {

@@ -60,7 +60,11 @@ const AccueilCopy = () => {
                 <div className={clsx(styles.gallery, "flux")}>
                     <h2>gallerie</h2>
                     <div className={styles.gallery__div}>
-                        <Button label="Gallerie" href="/GallerieCopy" />
+                        <Button
+                            label="Gallerie"
+                            href="/GallerieCopy"
+                            variant="secondary"
+                        />
                         <Image src={Ordi} alt="Ordinateur" />
                     </div>
                 </div>

@@ -1,27 +1,39 @@
 import NextLink from "next/link";
-// import { title } from "@/fonts/font";s
-import  style  from './Button.module.css'
+import style from "./Button.module.css";
+import clsx from "clsx";
 
 type ButtonProps = {
     label: string;
     href?: string;
     onClick?: () => void;
+    variant?: "primary" | "secondary";
 };
 
-export const Button: React.FC<ButtonProps> = ({label, href, onClick}) => {
+export const Button: React.FC<ButtonProps> = ({
+    label,
+    href,
+    onClick,
+    variant = "primary",
+}) => {
     if (href) {
         return (
-            <div >
+            <div>
                 <div className={style.container}>
-                    <NextLink href={href} passHref className={style.btn}>{label}</NextLink>
+                    <NextLink
+                        href={href}
+                        passHref
+                        className={clsx(style.btn, style[variant])}
+                    >
+                        {label}
+                    </NextLink>
                 </div>
             </div>
         );
     }
 
     return (
-        <button onClick={onClick} className="btn">
+        <button onClick={onClick} className={style.btn}>
             {label}
         </button>
     );
-}
+};
