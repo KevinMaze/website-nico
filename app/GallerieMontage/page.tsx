@@ -1,5 +1,4 @@
 "use client";
-import React, { useEffect, useState } from "react";
 import styles from "./Gallerie.module.css";
 import Image from "next/image";
 import Pexel1 from "../../public/images/pexel-1.jpg";
