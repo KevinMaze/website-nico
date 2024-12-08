@@ -4,6 +4,7 @@
 .bg__logo {
     position: relative;
     height: 100vh;
+    border-bottom: 2px solid var(--text);
 }
 
 .bg__logo::before {
@@ -33,12 +34,13 @@
     height: 100vh;
     display: flex;
     align-items: center;
+    border-bottom: 2px solid var(--text);
 }
 
 .bg__title::before {
     content: "";
     position: absolute;
-    opacity: 0.1;    
+    opacity: 0.2;    
     background-image: url(../../public/images/bg_title.jpg);
     background-size: cover;
     background-position: center;
@@ -89,6 +91,7 @@
     height: 100vh;
     display: flex;
     align-items: center;
+    border-bottom: 2px solid var(--text);
 }
 
 .bg__gallery::before {
@@ -125,6 +128,7 @@
     height: 100vh;
     display: flex;
     align-items: center;
+    border-bottom: 2px solid var(--text);
 }
 
 .about__div img {

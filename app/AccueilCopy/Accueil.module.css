@@ -1,0 +1,136 @@
+/* ACCCEUIL LOGO*/
+.bg__logo {
+    position: relative;
+    height: 100vh;
+    border-bottom: 2px solid var(--text);
+}
+
+.bg__logo::before {
+    content: "";
+    position: absolute;
+    opacity: 0.1;    
+    background-image: url(../../public/images/ordi.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* TITLE */
+.bg__title {
+    position: relative;
+    background-color: var(--background);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--text);
+}
+
+.bg__title::before {
+    content: "";
+    position: absolute;
+    opacity: 0.1;    
+    background-image: url(../../public/images/hand.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+}
+
+.title, .gallery, .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title h2, .about h2 {
+    font-family: var(--title);
+    font-size: 3rem;
+    margin-bottom: 2.5em;
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: var(--color-title);
+}
+
+.title__div, .gallery__div, .about__div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: var(--para);
+    color: var(--text);
+    font-weight: bold;
+    align-items: center;
+}
+
+.title__div img, .about__div img {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+}
+
+
+/* GALLERY */
+.bg__gallery {
+    position: relative;
+    background-color: var(--text);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--text);
+}
+
+.bg__gallery::before {
+    content: "";
+    position: absolute;
+    opacity: 0.2;    
+    background-image: url(../../public/images/word.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+}
+
+.gallery h2 {
+    color: var(--color-title);
+    font-size: 3rem;
+    margin-bottom: 2.5em;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-family: var(--title);
+}
+
+.gallery__div img {
+    width: 90%;
+    height: auto;
+    border-radius: 25px;
+}
+
+/* ABOUT */
+.bg__about {
+    position: relative;
+    background-color: var(--background);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.about__div img {
+    -webkit-mask-image: linear-gradient(to bottom left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    -webkit-mask-size: 100% 100%;
+    mask-image: linear-gradient(to bottom left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    mask-size: 100% 100%;
+}
