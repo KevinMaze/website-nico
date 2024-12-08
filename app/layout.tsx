@@ -36,9 +36,9 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
         <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Alumni+Sans+Pinstripe:ital@0;1&display=swap" rel="stylesheet"/>
       </head>
-      <body>
+      <body className="layout">
         {!isLandingPage && < Navbar />}
-        {children}
+        <main className="main">{children}</main>
         {!isLandingPage && < Footer />}
       </body>
     </html>

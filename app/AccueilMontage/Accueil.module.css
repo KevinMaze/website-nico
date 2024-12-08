@@ -13,6 +13,7 @@
     background-image: url(../../public/images/acceuil-montage.jpg);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     height: 100vh;
     width: 100%;
 }
@@ -41,6 +42,7 @@
     background-image: url(../../public/images/bg_title.jpg);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     height: 100vh;
     width: 100%;
 }
@@ -96,12 +98,13 @@
     background-image: url(../../public/images/bg_gallery.jpg);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     height: 100vh;
     width: 100%;
 }
 
 .gallery h2 {
-    color: #66FCF1;
+    color: var(--color-title);
     font-size: 3rem;
     margin-bottom: 2.5em;
     text-decoration: underline;
@@ -122,4 +125,11 @@
     height: 100vh;
     display: flex;
     align-items: center;
+}
+
+.about__div img {
+    -webkit-mask-image: linear-gradient(to bottom right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    -webkit-mask-size: 100% 100%;
+    mask-image: linear-gradient(to bottom right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    mask-size: 100% 100%;
 }
