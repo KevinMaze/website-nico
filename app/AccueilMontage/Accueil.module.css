@@ -1,4 +1,6 @@
-/* ACCCEUIL */
+
+
+/* ACCCEUIL LOGO*/
 .bg__logo {
     position: relative;
     height: 100vh;
@@ -15,6 +17,16 @@
     width: 100%;
 }
 
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+
 /* TITLE */
 .bg__title {
     position: relative;
@@ -22,8 +34,48 @@
     height: 100vh;
 }
 
+.bg__title::before {
+    content: "";
+    position: absolute;
+    opacity: 0.1;    
+    background-image: url(../../public/images/bg_title.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+
 
 /* GALLERY */
+.bg__gallery {
+    position: relative;
+    background-color: var(--background);
+    height: 100vh;
+}
 
+.bg__gallery::before {
+    content: "";
+    position: absolute;
+    opacity: 0.1;    
+    background-image: url(../../public/images/bg_gallery.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.gallery {
+
+
+}
 
 /* ABOUT */
+.bg__about {
+    position: relative;
+    background-color: var(--text);
+    height: 100vh;
+}
+
+.about {
+
+}
