@@ -60,6 +60,21 @@ z-index: 2;
     height: auto;
 }
 
+
+/*MEDIA QUERY*/
+@media (max-width: 1300px) {
+    .logo {
+        width: 400px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .logo {
+        width: 300px;
+    }
+}
+
+
 @media (max-width: 800px) {
 .container {
     flex-direction: column;
