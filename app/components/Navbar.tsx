@@ -81,8 +81,6 @@ const Navbar = () => {
         {href: "/Montage/AccueilMontage" , label:"Accueil Montage"},
         {href: "/Montage/GallerieMontage" , label:"Gallerie Montage"},
     ];
-    const isCopy = pathname.startsWith("/Copy") || pathname === "/About" || pathname === "/Contact";
-    const isVideo = pathname.startsWith("/Montage") || pathname === "/About" || pathname === "/Contact";
 
     const specificLinks = 
         currentSection === "copy" ? copyLinks : currentSection === "video" ? videoLinks : [];
