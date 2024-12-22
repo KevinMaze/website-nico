@@ -41,6 +41,7 @@
 
 .line {
     position: relative;
+    opacity: 0.5;
 }
 
 .line:after {
@@ -130,4 +131,8 @@
     transform: translateY(0);
     pointer-events: auto;
     }
+}
+
+.active {
+    opacity: 1;
 }
