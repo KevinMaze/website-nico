@@ -41,6 +41,7 @@
 
 .line {
     position: relative;
+    opacity: 0.5;
 }
 
 .line:after {
@@ -133,6 +134,5 @@
 }
 
 .active {
-    font-size: bold;
-    text-decoration: underline;
+    opacity: 1;
 }
