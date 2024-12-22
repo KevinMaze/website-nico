@@ -1,5 +1,3 @@
-
-
 /* ACCCEUIL LOGO*/
 .bg__logo {
     position: relative;
@@ -11,7 +9,7 @@
     content: "";
     position: absolute;
     opacity: 0.1;    
-    background-image: url(../../public/images/acceuil-montage.jpg);
+    background-image: url(../../../public/images/ordi.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -30,7 +28,7 @@
 /* TITLE */
 .bg__title {
     position: relative;
-    background-color: var(--text);
+    background-color: var(--background);
     height: 100vh;
     display: flex;
     align-items: center;
@@ -40,8 +38,8 @@
 .bg__title::before {
     content: "";
     position: absolute;
-    opacity: 0.2;    
-    background-image: url(../../public/images/bg_title.jpg);
+    opacity: 0.1;    
+    background-image: url(../../../public/images/hand.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -61,7 +59,7 @@
     margin-bottom: 2.5em;
     text-decoration: underline;
     text-transform: uppercase;
-    color: var(--background);
+    color: var(--color-title);
 }
 
 .title__div, .gallery__div, .about__div {
@@ -72,7 +70,7 @@
     margin-left: auto;
     margin-right: auto;
     font-family: var(--para);
-    color: var(--background);
+    color: var(--text);
     font-weight: bold;
     align-items: center;
 }
@@ -87,7 +85,7 @@
 /* GALLERY */
 .bg__gallery {
     position: relative;
-    background-color: var(--background);
+    background-color: var(--text);
     height: 100vh;
     display: flex;
     align-items: center;
@@ -97,8 +95,8 @@
 .bg__gallery::before {
     content: "";
     position: absolute;
-    opacity: 0.1;    
-    background-image: url(../../public/images/bg_gallery.jpg);
+    opacity: 0.2;    
+    background-image: url(../../../public/images/word.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -107,7 +105,7 @@
 }
 
 .gallery h2 {
-    color: var(--color-title);
+    color: var(--background);
     font-size: 3rem;
     margin-bottom: 2.5em;
     text-decoration: underline;
@@ -116,24 +114,23 @@
 }
 
 .gallery__div img {
-    width: 80%;
-    height: 90%;
+    width: 90%;
+    height: auto;
     border-radius: 25px;
 }
 
 /* ABOUT */
 .bg__about {
     position: relative;
-    background-color: var(--text);
+    background-color: var(--background);
     height: 100vh;
     display: flex;
     align-items: center;
-    border-bottom: 2px solid var(--text);
 }
 
 .about__div img {
-    -webkit-mask-image: linear-gradient(to bottom right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    -webkit-mask-image: linear-gradient(to bottom left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     -webkit-mask-size: 100% 100%;
-    mask-image: linear-gradient(to bottom right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(to bottom left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     mask-size: 100% 100%;
 }

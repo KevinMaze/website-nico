@@ -6,6 +6,7 @@ import styles from "./Navbar.module.css";
 import logo from "../../public/images/logo.png";
 import Image from "next/image";
 import {clsx} from "clsx";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
     const [isVisible, setIsVisible] = useState(true);
@@ -57,6 +58,41 @@ const Navbar = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, [scrollY]);
 
+    const pathname = usePathname();
+    const [currentSection, setCurrentSection] = useState<"copy" | "video" | null>(null);
+    // Définir la section courante en fonction de l'url
+    useEffect(() => {
+        if (pathname.startsWith("/Copy")) {
+            setCurrentSection("copy");
+        } else if (pathname.startsWith("/Montage")) {
+            setCurrentSection("video");
+        }
+    }, [pathname]);
+
+    const commonLinks = [
+        {href: "/About" , label:"A Propos"},
+        {href: "/Contact" , label:"Contact"},
+    ];
+    const copyLinks = [
+        {href: "/Copy/AccueilCopy" , label:"Accueil Copywriting"},
+        {href: "/Copy/GallerieCopy" , label:"Gallerie Copywriting"},
+    ];
+    const videoLinks = [
+        {href: "/Montage/AccueilMontage" , label:"Accueil Montage"},
+        {href: "/Montage/GallerieMontage" , label:"Gallerie Montage"},
+    ];
+    const isCopy = pathname.startsWith("/Copy") || pathname === "/About" || pathname === "/Contact";
+    const isVideo = pathname.startsWith("/Montage") || pathname === "/About" || pathname === "/Contact";
+
+    const specificLinks = 
+        currentSection === "copy" ? copyLinks : currentSection === "video" ? videoLinks : [];
+
+    const links = [
+        ...specificLinks,
+        ...commonLinks,
+    ]
+
+
     return (
         <nav ref={navRef} className={`${styles.navbar} ${!isVisible ? styles.hidden : ""}`}>
             <Link href="/">< Image src={logo} alt="Logo Nicolas Michon" className={styles.logo}/></Link>
@@ -66,10 +102,15 @@ const Navbar = () => {
                 <div className={burgerLine}></div>
             </button>
             <ul className={burgerClassName}>
-                <li onClick={closeMenu}><Link href="/AccueilMontage" className={styles.line}>Accueil Montage</Link></li>
+                {links.map((link, index) => (
+                    <li key={index} className={clsx (styles.line, pathname === link.href ? styles.active : "")} onClick={closeMenu}>
+                        <Link href={link.href}>{link.label}</Link>
+                    </li>
+                ))}
+                {/* <li onClick={closeMenu}><Link href="/AccueilMontage" className={styles.line}>Accueil Montage</Link></li>
                 <li onClick={closeMenu}><Link href="/GallerieMontage" className={styles.line}>Gallerie</Link></li>
                 <li onClick={closeMenu}><Link href="/About" className={styles.line}>A Propos</Link></li>
-                <li onClick={closeMenu}><Link href="/Contact" className={styles.line}>Contact</Link></li>
+                <li onClick={closeMenu}><Link href="/Contact" className={styles.line}>Contact</Link></li> */}
             </ul>
         </nav>
     );

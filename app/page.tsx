@@ -17,7 +17,7 @@ export default function Home() {
             <div className={styles.sectionLeft}>
                 <div className={styles.overlay}></div>
                 <div className={styles.buttonWrapper}>
-                    <Button label="Montage" href="/AccueilMontage" />
+                    <Button label="Montage" href="/Montage/AccueilMontage" />
                 </div>
             </div>
 
@@ -30,7 +30,7 @@ export default function Home() {
             <div className={styles.sectionRight}>
                 <div className={styles.overlay}></div>
                 <div className={styles.buttonWrapper}>
-                    <Button label="Copywriting" href="/AccueilCopy" />
+                    <Button label="Copywriting" href="/Copy/AccueilCopy" />
                 </div>
             </div>
         </section>

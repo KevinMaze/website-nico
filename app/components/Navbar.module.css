@@ -131,3 +131,8 @@
     pointer-events: auto;
     }
 }
+
+.active {
+    font-size: bold;
+    text-decoration: underline;
+}

@@ -1,14 +1,14 @@
 import React from "react";
 import styles from "./Accueil.module.css";
 import clsx from "clsx";
+import { Button } from "../../components/Button";
 import Image from "next/image";
-import Logo from "../../public/images/logo.png";
-import ImgTitle from "../../public/images/bg-montage.jpg";
-import Pexel from "../../public/images/pexel-1.jpg";
-import Profil from "../../public/images/profil.jpg";
-import { Button } from "../components/Button";
+import Profil from "@/public/images/profil.jpg";
+import Logo from "@/public/images/logo.png";
+import BGCopy from "@/public/images/bg-copy.jpg";
+import Ordi from "@/public/images/ordi.jpg";
 
-const AccueilMontage = () => {
+const AccueilCopy = () => {
     return (
         <div className={styles.container}>
             <div className={styles.bg__logo}>
@@ -24,6 +24,7 @@ const AccueilMontage = () => {
                     <h2>title</h2>
 
                     <div className={styles.title__div}>
+                        <Image src={BGCopy} alt="Ordinateur" />
                         <p>
                             Lorem ipsum dolor sit amet. Qui molestiae animi et
                             omnis dolorem qui dignissimos fugit in nostrum
@@ -51,41 +52,30 @@ const AccueilMontage = () => {
                             ad tempora pariatur ut animi quibusdam sed
                             perspiciatis Quis.
                         </p>
-                        <Image
-                            src={ImgTitle}
-                            alt="Template de montage"
-                            className={styles.imgTitle}
-                        />
                     </div>
                 </div>
             </div>
 
             <div className={styles.bg__gallery}>
                 <div className={clsx(styles.gallery, "flux")}>
-                    <h2>gallery</h2>
-
+                    <h2>gallerie</h2>
                     <div className={styles.gallery__div}>
-                        <Image
-                            src={Pexel}
-                            alt="Image de la gallery"
-                            className={styles.imgGallery}
+                        <Button
+                            label="Gallerie"
+                            href="/GallerieCopy"
+                            variant="secondary"
                         />
-                        <Button label="Gallery" href="/GallerieMontage" />
+                        <Image src={Ordi} alt="Ordinateur" />
                     </div>
                 </div>
             </div>
 
             <div className={styles.bg__about}>
                 <div className={clsx(styles.about, "flux")}>
-                    <h2>a propos</h2>
-
+                    <h2>A Propos</h2>
                     <div className={styles.about__div}>
-                        <Button
-                            label="A Propos"
-                            href="/About"
-                            variant="secondary"
-                        />
                         <Image src={Profil} alt="Image de profil" />
+                        <Button label="A Propos" href="/About" />
                     </div>
                 </div>
             </div>
@@ -93,4 +83,4 @@ const AccueilMontage = () => {
     );
 };
 
-export default AccueilMontage;
+export default AccueilCopy;
